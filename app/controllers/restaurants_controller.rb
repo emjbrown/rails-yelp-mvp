@@ -16,6 +16,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to restaurant_path(@restaurant), notice: 'Restaurant was successfully created'
     else
+      # Sends 422 HTTP response code
       render :new, status: :unprocessable_entity
     end
   end
