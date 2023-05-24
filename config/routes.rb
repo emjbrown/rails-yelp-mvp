@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   post 'restaurants', to: 'restaurants#create'
 
   # User can view one restaurant page
-  get 'restaurant/:id', to: 'restaurants#show'
+  get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
 end
