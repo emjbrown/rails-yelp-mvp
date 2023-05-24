@@ -1,5 +1,7 @@
 <div class="container">
   <h1><%= @restaurant.name %></h1>
+
+
   <div class="card">
     <p>
       <strong>Address:</strong>
@@ -17,5 +19,15 @@
     </p>
   </div>
 
-  <%= link_to 'Back to all restaurants', restaurants_path %>
+  <p><%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %></p>
+
+  <div class="card">
+    <% @restaurant.reviews.each do |review| %>
+      <p>Rating: <%= review.rating %></p>
+      <em><%= review.content %></em>
+    <% end %>
+  </div>
+
+
+  <p><%= link_to 'Back to all restaurants', restaurants_path %></p>
 </div>
