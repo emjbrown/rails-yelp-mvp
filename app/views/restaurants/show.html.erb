@@ -1,0 +1,21 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <div class="card">
+    <p>
+      <strong>Address:</strong>
+      <%= @restaurant.address %>
+    </p>
+
+    <p>
+      <strong>Phone number:</strong>
+      <%= @restaurant.phone_number %>
+    </p>
+
+    <p>
+      <strong>Category:</strong>
+      <%= @restaurant.category %>
+    </p>
+  </div>
+
+  <%= link_to 'Back to all restaurants', restaurants_path %>
+</div>
